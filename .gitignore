@@ -1,0 +1,5 @@
+node_modules/
+helloexpress/fibo/
+vueapp/hellovue/
+*.swp
+*.orig

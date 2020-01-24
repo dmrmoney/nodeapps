@@ -1,0 +1,27 @@
+#####################################################################
+Files checked in:
+    index.js
+    db/connection.js
+    db/messages.js
+    client/src/views/Home.vue
+#####################################################################
+
+STEPS TO RECREATE (https://vegibit.com/vue-js-express-tutorial/):
+Install MongoDB, start the server "mongod"
+$ npm init
+$ npm install express morgan cors body-parser
+ create index.js (as given in the tutorial)
+$ npm install @vue/cli
+$ vue create client  #answer lots of config questions, see tutorials
+Create client/src/views/Home.vue as per tutorial
+$ npm run server # browser -> http://localhost:8080 : shows Vue welcome page.
+$ npm install monk joi
+$ mkdir db
+create db/connection.js and db/messages.js as per tutorial
+Terminal 1: $ node index.js # listening on 4000
+Terminal 2: $ cd client; npm run serve # listening on 8080
+Browser -> htpp://localhost:8080: Shows a form for entering a record.
+When "Add Message" button is hit, it posts the form data to server on port 4000, which
+in turn inserts the record into mongodb "messages" collection, also fetches back current records
+These are sent back to client which displays them in the same page.
+
